@@ -1,99 +1,236 @@
-body {
-  font-family: Arial, sans-serif;
+/* Basic reset for margins and padding */
+body, h1, h2, p, ul {
   margin: 0;
-  background: #f7f7f7;
-  color: #222;
-}
-
-header {
-  background: #222;
-  color: #fff;
-  padding: 1.5rem 0 1rem 0;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
   padding: 0;
-  margin: 1rem 0 0 0;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+/* Use a harmonious blue for headers, nav, and borders */
+:root {
+  --soft-blue: #4682b4; /* Steel Blue: matches well with pastel blue */
+  --pastel-blue: #b3e0ff; /* Pastel sky blue background */
+  --light-blue: #e3f4ff; /* Light pastel blue for nav links */
 }
 
-nav a:hover {
-  text-decoration: underline;
+/* Set a simple background color and font */
+body {
+  font-family: Arial, sans-serif; /* Easy-to-read font */
+  background-color: var(--pastel-blue);     /* Pastel sky blue background */
+  color: #222;                   /* Dark text for contrast */
+  line-height: 1.6;              /* More readable text */
+  text-align: center;            /* Center all text on the page */
 }
 
-main {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+/* Use sans-serif font for all text */
+* {
+  font-family: Arial, sans-serif;
+}
+
+/* Center all headers */
+h1, h2 {
+  color: var(--soft-blue); /* Harmonious blue for headers */
+  text-align: center; /* Center all headers */
+}
+
+/* Center the header text */
+header {
+  /* Set the background image for the banner */
+  background-image: url('img/bluebannersky.jpg');
+  background-size: cover; /* Make the image cover the header */
+  background-position: center; /* Center the image */
+  color: white;
+  min-height: 180px; /* Set a minimum height for the banner */
   text-align: center;
+  position: relative; /* Needed for overlay */
+  overflow: hidden; /* Ensure overlay doesn't overflow header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Add space below the header */
 }
 
-section {
-  margin-bottom: 2.5rem;
+/* Overlay to make text readable on the banner */
+.banner-overlay {
+  background: rgba(141, 194, 229, 0.735); /* Pastel sky blue overlay, mostly opaque */
+  position: absolute; /* Cover the entire header */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0; /* No rounded corners for overlay */
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-h1, h2 {
-  text-align: center;
+header .banner-overlay > * {
+  position: relative;
+  z-index: 2;
 }
 
-h2 {
-  color: #2a7ae2;
-  margin-top: 0;
+/* Add spacing between sections */
+section {
+  background: transparent; /* Remove section background, use site background */
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;              /* Keeps content narrow and readable */
+  border-radius: 0;            /* Remove rounded corners */
+  box-shadow: none; /* Remove shadow */
 }
 
+/* Style section headings */
+section h2 {
+  /* color is now set by h2 selector above */
+  margin-bottom: 10px;
+}
+
+/* Style lists */
 ul {
-  padding-left: 1.2rem;
+  list-style-type: disc;
+  margin-left: 20px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-input, textarea {
-  padding: 0.5rem;
-  border: 1px solid #bbb;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-button {
-  width: 120px;
-  padding: 0.6rem;
-  background: #2a7ae2;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #185bb5;
-}
-
+/* Style the footer */
 footer {
   text-align: center;
-  padding: 1rem 0;
-  background: #222;
-  color: #fff;
-  margin-top: 2rem;
-  border-radius: 0 0 8px 8px;
+  padding: 15px 0;
+  background: #eee;
+  color: #555;
+  margin-top: 30px;
+  font-size: 0.9em;
+}
+
+/* Add a simple hover effect for links */
+a {
+  color: #4f8cff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;    /* Underline on hover for emphasis */
+}
+
+/* Style the navigation bar */
+nav {
+  text-align: center; /* Center the navigation bar */
+  margin-top: 15px;
+  background: var(--soft-blue); /* Harmonious blue for nav bar */
+  padding: 10px 0; /* Add some padding for better appearance */
+}
+nav ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  display: inline; /* Display list items in a row */
+  margin-right: 20px; /* Space between links */
+}
+nav ul li:last-child {
+  margin-right: 0; /* No space after the last link */
+}
+nav a {
+  font-weight: bold; /* Make navigation links bold */
+  color: var(--light-blue); /* Light pastel sky blue font color */
+}
+nav a:hover {
+  color: var(--pastel-blue); /* Slightly lighter on hover */
+}
+
+/* Style the Favorite Games section to be horizontal */
+#games ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Center the list */
+}
+#games ul li {
+  display: inline-block; /* Display games in a row */
+  margin: 10px 15px; /* Space between games */
+  text-align: center;
+}
+.game-icon {
+  width: 80px; /* Make icons square */
+  height: 80px;
+  border-radius: 12px; /* Rounded corners */
+  object-fit: cover; /* Make sure the image covers the square */
+  display: block;
+  margin: 0 auto 8px auto; /* Center icon and add space below */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Soft shadow for icons */
+  background: #eee; /* Fallback background */
+}
+#games span {
+  display: block;
+  margin-top: 4px;
+  font-size: 1em;
+}
+
+/* Make Skills and Projects lists horizontal and remove bullet points */
+#skills ul, #projects ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Center the list */
+}
+#skills ul li, #projects ul li {
+  display: inline-block; /* Display items in a row */
+  margin: 0 15px; /* Space between items */
+  text-align: center; /* Center icon and text in each skill */
+}
+
+/* Profile image styles */
+.profile-pic {
+  width: 100px; /* Make the image square */
+  height: 100px;
+  border-radius: 16px; /* Rounded corners */
+  object-fit: cover; /* Make sure the image covers the square */
+  display: block;
+  margin: 24px auto 16px auto; /* Move image down by increasing top margin */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Soft shadow for image */
+  background: #eee; /* Fallback background */
+  border: 3px solid var(--soft-blue); /* Harmonious blue border */
+}
+
+/* Make all non-header text smaller */
+p, li, a, span {
+  font-size: 0.9em; /* Make text smaller in sections */
+}
+
+/* Contact icons styles */
+.contact-icons {
+  text-align: center; /* Center the icons */
+  margin-top: 10px;
+}
+.contact-icons a {
+  display: inline-block; /* Display contact icons in a row */
+  margin: 0 12px; /* Add space between icons */
+}
+.contact-icon {
+  width: 40px; /* Make icons square */
+  height: 40px;
+  border-radius: 8px; /* Rounded corners */
+  object-fit: cover; /* Make sure the image covers the square */
+  vertical-align: middle;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Soft shadow for icons */
+  background: #eee; /* Fallback background */
+}
+.contact-label {
+  display: block;
+  font-size: 0.8em; /* Small font for label */
+  color: #3566a8; /* Harmonious blue for label */
+  margin-top: 2px;
+  text-align: center;
+}
+
+/* Skill icon styles */
+.skill-icon {
+  width: 48px; /* Make icons bigger */
+  height: 48px;
+  border-radius: 6px; /* Slightly rounded corners */
+  object-fit: cover;
+  background: #eee;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4px; /* Match space below game icons */
 }

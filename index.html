@@ -2,80 +2,142 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Portfolio Website</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Welcome to Anna's Portfolio!</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <nav>
+    <!-- Navigation links to each section -->
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#games">Favorite Games</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <!-- Website Header -->
   <header>
-    <h1>My Portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#artists">Favorite Artists</a></li>
-        <li><a href="#contact">Contact Me</a></li>
-      </ul>
-    </nav>
+    <!-- Banner overlay for readability -->
+    <div class="banner-overlay">
+      <!-- Profile image above the main heading -->
+      <img src="img/bubbles icon.jpg" alt="Profile picture" class="profile-pic">
+      <h1>My Personal Site</h1>
+      <p>Welcome to my portfolio!</p>
+    </div>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Hello! My name is Anna and I am a computer science student studying at the University of Louisville's J.B. Speed School of Engineering. I love coding, gaming and reading. My goal is to become a video game developer!
-      </p>
-      <p>
-        Hello! I'm a web development student passionate about building creative and useful websites. I enjoy learning new technologies and sharing my projects.
-      </p>
-    </section>
+  <!-- About Me Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      <!-- Write a short introduction about yourself here -->
+      Hi! I'm a web development student learning to build awesome websites.
+    </p>
+    <!-- More about me paragraph -->
+    <p>
+      Hello! My name is Anna and I am studying computer science at the University of Louisville's Speed School of Engineering. I dove into the computer science scene with hopes to becoming a video game developer! I'll be using this site to document my adventures!
+    </p>
+  </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML &amp; CSS</li>
-        <li>JavaScript (learning)</li>
-        <li>Responsive Design</li>
-        <li>Teamwork</li>
-      </ul>
-    </section>
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <!-- List your skills here -->
+      <li>
+        <!-- Python icon above the skill name -->
+        <img src="img/python.png" alt="Python" class="skill-icon"><br>
+        Python
+      </li>
+      <li>
+        <!-- C/C++ icon above the skill name -->
+        <img src="img/css3.png" alt="C/C++" class="skill-icon"><br>
+        CSS(learning)
+      </li>
+      <li>
+        <!-- Java icon above the skill name -->
+        <img src="img/java.png" alt="Java" class="skill-icon"><br>
+        Java (learning)
+      </li>
+      <li>
+        <!-- HTML/CSS icon above the skill name -->
+        <img src="img/html-5.png" alt="HTML/CSS" class="skill-icon"><br>
+        HTML (learning)
+      </li>
+    </ul>
+  </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>Check back soon for my latest web development projects!</p>
-      <!-- You can add project cards or links here as you build them -->
-    </section>
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <!-- Add your projects here -->
+      <li>This is where my future projects will live! Stay Tuned!</li>
+      
+    </ul>
+  </section>
 
-    <section id="artists">
-      <h2>Favorite Artists</h2>
-      <ul>
-        <li>Vincent van Gogh</li>
-        <li>Frida Kahlo</li>
-        <li>Claude Monet</li>
-        <li>Banksy</li>
-      </ul>
-    </section>
+  <!-- Favorite Games Section -->
+  <section id="games">
+    <h2>Favorite Games</h2>
+    <!-- Description under the Favorite Games header -->
+    <p>These are some of my favorite games! Click the icons to see more about each game!</p>
+    <ul>
+      <!-- List your favorite games here -->
+      <li>
+        <!-- Game icon template: Replace '#' with the game's website and 'game-icon.png' with the icon image -->
+        <a href="https://elderscrolls.bethesda.net/en/skyrim" target="_blank">
+          <img src="img/SkyrimCover.jpg" alt="Skyrim" class="game-icon">
+        </a>
+        <span>Skyrim</span>
+      </li>
+      <li>
+        <a href="https://www.stardewvalley.net/" target="_blank">
+          <img src="img/SVCover.png" alt="Stardew Valley" class="game-icon">
+        </a>
+        <span>Stardew Valley</span>
+      </li>
+      <li>
+        <a href="https://www.minecraft.net/" target="_blank">
+          <img src="img/MCGameCover.jpeg" alt="Minecraft" class="game-icon">
+        </a>
+        <span>Minecraft</span>
+      </li>
+      <li>
+        <a href="https://na.finalfantasyxiv.com/" target="_blank">
+          <img src="img/FFXVCover.png" alt="Final Fantasy XIV" class="game-icon">
+        </a>
+        <span>Final Fantasy XIV</span>
+      </li>
+      <!-- To add more games, copy the template above and update the link, image, and name -->
+    </ul>
+  </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+  <!-- Contact Me Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>You can reach me through the following platforms:</p>
+    <!-- Contact icons -->
+    <div class="contact-icons">
+      <!-- LinkedIn icon: Replace the href and src with your own profile and icon image -->
+      <a href="www.linkedin.com/in/AnnaBakerUofL" target="_blank">
+        <img src="img/linkdinTempicon.png" alt="LinkedIn" class="contact-icon">
+        <span class="contact-label">LinkedIn</span>
+      </a>
+      <!-- Email icon: Replace src with your own icon image -->
+      <a href="mailto:your.aebake05@louisville.edu">
+        <img src="img/mail_25dp_5084C1_FILL0_wght400_GRAD0_opsz24.png" alt="Email" class="contact-icon">
+        <span class="contact-label">Email</span>
+      </a>
+    </div>
+  </section>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
-
+  <!-- Website Footer -->
   <footer>
-    <p>&copy; 2025 My Portfolio</p>
+    <p>&copy; 2025 My Personal Site</p>
   </footer>
 </body>
 </html>
