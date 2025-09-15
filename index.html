@@ -2,139 +2,164 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <title>Welcome to Anna's Portfolio!</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-light">
   <!-- Navigation Bar -->
-  <nav>
-    <!-- Navigation links to each section -->
-    <ul>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#games">Favorite Games</a></li>
-      <li><a href="#contact">Contact Me</a></li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--soft-blue);">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Anna's Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#games">Favorite Games</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <!-- Website Header -->
-  <header>
-    <!-- Banner overlay for readability -->
-    <div class="banner-overlay">
-      <!-- Profile image above the main heading -->
-      <img src="img/bubbles icon.jpg" alt="Profile picture" class="profile-pic">
-      <h1>Welcome to Anna's Portfolio!</h1>
-      <p>Your one-stop destination to learn more about me!</p>
+  <header class="position-relative">
+    <div class="banner-overlay d-flex flex-column align-items-center justify-content-center">
+      <img src="img/bubbles icon.jpg" alt="Profile picture" class="profile-pic mb-3 shadow">
+      <h1 class="fw-bold mb-2">Welcome to Anna's Portfolio!</h1>
+      <p class="lead mb-0">Your one-stop destination to learn more about me!</p>
     </div>
   </header>
 
-  <!-- About Me Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    
-    <!-- More about me paragraph -->
-    <p>
-      Hello! My name is Anna and I am studying computer science at the University of Louisville's Speed School of Engineering. I dove into the computer science scene with hopes to becoming a video game developer! I'll be using this site to document my adventures!
-    </p>
-  </section>
+  <main>
+    <!-- About Me Section -->
+    <section id="about" class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="fw-semibold mb-3">About Me</h2>
+          <p class="fs-5">
+            Hello! My name is Anna and I am studying computer science at the University of Louisville's Speed School of Engineering. I dove into the computer science scene with hopes to becoming a video game developer! I'll be using this site to document my adventures!
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <!-- List your skills here -->
-      <li>
-        <!-- Python icon above the skill name -->
-        <img src="img/python.png" alt="Python" class="skill-icon"><br>
-        Python
-      </li>
-      <li>
-        <!-- C/C++ icon above the skill name -->
-        <img src="img/css3.png" alt="C/C++" class="skill-icon"><br>
-        CSS(learning)
-      </li>
-      <li>
-        <!-- Java icon above the skill name -->
-        <img src="img/java.png" alt="Java" class="skill-icon"><br>
-        Java (learning)
-      </li>
-      <li>
-        <!-- HTML/CSS icon above the skill name -->
-        <img src="img/html-5.png" alt="HTML/CSS" class="skill-icon"><br>
-        HTML (learning)
-      </li>
-    </ul>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="fw-semibold mb-4">Skills</h2>
+          <div class="d-flex flex-wrap justify-content-center gap-4">
+            <div class="d-flex flex-column align-items-center">
+              <img src="img/python.png" alt="Python" class="skill-icon mb-2">
+              <span>Python</span>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+              <img src="img/css3.png" alt="CSS" class="skill-icon mb-2">
+              <span>CSS (learning)</span>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+              <img src="img/java.png" alt="Java" class="skill-icon mb-2">
+              <span>Java (learning)</span>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+              <img src="img/html-5.png" alt="HTML" class="skill-icon mb-2">
+              <span>HTML (learning)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <!-- Add your projects here -->
-      <li>This is where my future projects will live! Stay Tuned!</li>
-      
-    </ul>
-  </section>
+    <!-- Projects Section -->
+    <section id="projects" class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+          <h2 class="fw-semibold mb-4">Projects</h2>
+          <div class="d-flex flex-row flex-nowrap overflow-auto justify-content-center projects-cards">
+            <!-- Project Card: Intel Website -->
+            <a href="https://annab05.github.io/02-prj-intel-sustainability/" class="project-card card text-decoration-none mx-2" target="_blank">
+              <div class="card-body d-flex flex-column align-items-center justify-content-center p-2 h-100">
+                <img src="img/IntelLogoP.jpg" alt="Intel Logo" class="project-icon mb-2">
+                <span class="project-title text-center">Intel Timeline Webpage</span>
+                <div class="project-desc">
+                  A webpage assignment showcasing a timeline of Intel's most groundbreaking innovations from the founding of Intel Corporation in 1968 to the 2024 Sustainability Summit.
+                </div>
+              </div>
+            </a>
+            <!-- Add more project cards here as needed -->
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Favorite Games Section -->
-  <section id="games">
-    <h2>Favorite Games</h2>
-    <!-- Description under the Favorite Games header -->
-    <p>These are some of my favorite games! Click the icons to see more about each game!</p>
-    <ul>
-      <!-- List your favorite games here -->
-      <li>
-        <!-- Game icon template: Replace '#' with the game's website and 'game-icon.png' with the icon image -->
-        <a href="https://elderscrolls.bethesda.net/en/skyrim" target="_blank">
-          <img src="img/SkyrimCover.jpg" alt="Skyrim" class="game-icon">
-        </a>
-        <span>Skyrim</span>
-      </li>
-      <li>
-        <a href="https://www.stardewvalley.net/" target="_blank">
-          <img src="img/SVCover.png" alt="Stardew Valley" class="game-icon">
-        </a>
-        <span>Stardew Valley</span>
-      </li>
-      <li>
-        <a href="https://www.minecraft.net/" target="_blank">
-          <img src="img/MCGameCover.jpeg" alt="Minecraft" class="game-icon">
-        </a>
-        <span>Minecraft</span>
-      </li>
-      <li>
-        <a href="https://na.finalfantasyxiv.com/" target="_blank">
-          <img src="img/FFXVCover.png" alt="Final Fantasy XIV" class="game-icon">
-        </a>
-        <span>Final Fantasy XIV</span>
-      </li>
-      <!-- To add more games, copy the template above and update the link, image, and name -->
-    </ul>
-  </section>
+    <!-- Favorite Games Section -->
+    <section id="games" class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+          <h2 class="fw-semibold mb-3">Favorite Games</h2>
+          <p class="mb-4">These are some of my favorite games! Click the icons to see more about each game!</p>
+          <div class="d-flex flex-wrap justify-content-center gap-4">
+            <div>
+              <a href="https://elderscrolls.bethesda.net/en/skyrim" target="_blank">
+                <img src="img/SkyrimCover.jpg" alt="Skyrim" class="game-icon mb-2">
+              </a>
+              <span>Skyrim</span>
+            </div>
+            <div>
+              <a href="https://www.stardewvalley.net/" target="_blank">
+                <img src="img/SVCover.png" alt="Stardew Valley" class="game-icon mb-2">
+              </a>
+              <span>Stardew Valley</span>
+            </div>
+            <div>
+              <a href="https://www.minecraft.net/" target="_blank">
+                <img src="img/MCGameCover.jpeg" alt="Minecraft" class="game-icon mb-2">
+              </a>
+              <span>Minecraft</span>
+            </div>
+            <div>
+              <a href="https://na.finalfantasyxiv.com/" target="_blank">
+                <img src="img/FFXVCover.png" alt="Final Fantasy XIV" class="game-icon mb-2">
+              </a>
+              <span>Final Fantasy XIV</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Contact Me Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>You can reach me through the following platforms:</p>
-    <!-- Contact icons -->
-    <div class="contact-icons">
-      <!-- LinkedIn icon: Replace the href and src with your own profile and icon image -->
-      <a href="www.linkedin.com/in/AnnaBakerUofL" target="_blank">
-        <img src="img/linkdinTempicon.png" alt="LinkedIn" class="contact-icon">
-        <span class="contact-label">LinkedIn</span>
-      </a>
-      <!-- Email icon: Replace src with your own icon image -->
-      <a href="mailto:your.aebake05@louisville.edu">
-        <img src="img/mail_25dp_5084C1_FILL0_wght400_GRAD0_opsz24.png" alt="Email" class="contact-icon">
-        <span class="contact-label">Email</span>
-      </a>
-    </div>
-  </section>
+    <!-- Contact Me Section -->
+    <section id="contact" class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="fw-semibold mb-3">Contact Me</h2>
+          <p>You can reach me through the following platforms:</p>
+          <div class="contact-icons d-flex justify-content-center gap-4 mt-3">
+            <a href="www.linkedin.com/in/AnnaBakerUofL" target="_blank" class="d-flex flex-column align-items-center">
+              <img src="img/linkdinTempicon.png" alt="LinkedIn" class="contact-icon mb-1">
+              <span class="contact-label">LinkedIn</span>
+            </a>
+            <a href="mailto:your.aebake05@louisville.edu" class="d-flex flex-column align-items-center">
+              <img src="img/mail_25dp_5084C1_FILL0_wght400_GRAD0_opsz24.png" alt="Email" class="contact-icon mb-1">
+              <span class="contact-label">Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Website Footer -->
-  <footer>
-    <p>&copy; 2025 My Personal Site</p>
+  <footer class="mt-5">
+    <p class="mb-0">&copy; 2025 My Personal Site</p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
