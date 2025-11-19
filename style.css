@@ -35,7 +35,7 @@ h1, h2 {
 /* Center the header text */
 header {
   /* Set the background image for the banner */
-  background-image: url('img/bluebannersky.jpg');
+  background-image: url('img/BlueSky.jfif');
   background-size: cover; /* Make the image cover the header */
   background-position: center; /* Center the image */
   color: white;
@@ -88,7 +88,7 @@ section {
   background: transparent; /* Remove section background, use site background */
   margin: 20px auto;
   padding: 20px;
-  max-width: 600px;              /* Keeps content narrow and readable */
+  max-width: 1000px;              /* Keeps content readable on larger screens */
   border-radius: 0;            /* Remove rounded corners */
   box-shadow: none; /* Remove shadow */
 }
@@ -131,17 +131,21 @@ nav {
   background: var(--soft-blue); /* Harmonious blue for nav bar */
   padding: 10px 0; /* Add some padding for better appearance */
 }
+/* Use Bootstrap's default collapsed behavior on small screens. Only force inline layout on wide screens. */
 nav ul {
   list-style: none; /* Remove bullet points */
   padding: 0;
   margin: 0;
 }
-nav ul li {
-  display: inline; /* Display list items in a row */
-  margin-right: 20px; /* Space between links */
-}
-nav ul li:last-child {
-  margin-right: 0; /* No space after the last link */
+
+@media (min-width: 992px) {
+  nav ul li {
+    display: inline; /* Display list items in a row on large screens */
+    margin-right: 20px; /* Space between links */
+  }
+  nav ul li:last-child {
+    margin-right: 0; /* No space after the last link */
+  }
 }
 nav a {
   font-weight: bold; /* Make navigation links bold */
@@ -203,6 +207,13 @@ nav a:hover {
   border: 3px solid var(--soft-blue);
   box-shadow: 0 4px 24px 0 rgba(70,130,180,0.18);
   background: #eee; /* Fallback background */
+}
+
+/* Make images responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Make all non-header text smaller */
@@ -399,5 +410,24 @@ h1 {
     width: 95%;
     min-width: unset;
     max-width: 98vw;
+  }
+  /* Smaller profile picture on narrow screens */
+  .profile-pic {
+    width: 72px;
+    height: 72px;
+    margin-top: 12px;
+  }
+  /* Use more of the viewport on mobile for section content */
+  section {
+    max-width: 96vw;
+    padding: 16px;
+  }
+  .skill-icon, .game-icon {
+    width: 60px;
+    height: 60px;
+  }
+  header {
+    min-height: 180px;
+    padding: 18px 8px;
   }
 }
